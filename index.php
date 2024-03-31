@@ -38,6 +38,7 @@
 				<th>No</th>
 				<th>Nama Mahasiswa</th>
 				<th>NIM</th>
+				<th>Jenis Kelamin</th>
 				<th>Fakultas</th>
 			</tr>
 		</thead>
@@ -51,6 +52,7 @@
 					<td><?php echo $no++; ?></td>
 					<td><?php echo $d['nama']; ?></td>
 					<td><?php echo $d['nim']; ?></td>
+					<td><?php echo $d['jenis_kelamin']; ?></td>
 					<td><?php echo $d['fakultas']; ?></td>
 				</tr>
 				<?php 
@@ -63,7 +65,7 @@
 	<script>
 		var ctx = document.getElementById("myChart").getContext('2d');
 		var myChart = new Chart(ctx, {
-			type: 'bar',
+			type: 'pie',
 			data: {
 				labels: ["Teknik", "Fisip", "Ekonomi", "Pertanian"],
 				datasets: [{
